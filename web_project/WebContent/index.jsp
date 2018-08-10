@@ -30,7 +30,6 @@
 						<a class="dropdown-item" href="#">로그아웃</a>
 					</div>
 				</li>
-				
 			</ul>
 		</div>
 	</nav>
