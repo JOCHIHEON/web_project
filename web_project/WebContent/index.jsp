@@ -45,7 +45,31 @@
 				href="#registerModal">등록하기</a> <a class="btn btn-danger mx-1 mt-2"
 				data-toggle="modal" href="#reportModal">신고하기</a>
 		</form>
+		<div class="card bg-light mt-3">
+			<div class="card-header bg-light">
+				<div class="row">
+					<div class="col-8 text-left">
+						컴퓨터개론&nbsp;<small>조치헌</small>
+					</div>
+					<div class="col-4 text-right">
+						종합<span style="color: red;">A</span>
+					</div>
+				</div>
+			</div>
+			<div class="card-body">
+				<h5 class="card-title">
+					정말 좋은 강의에요.&nbsp;<small>(2018년 가을학기)</small>
+				</h5>
+				<p class="card-text">강의가 많이 널ㄴ러해서, 솔직히 많이 배운 건 없는 것 같지만 학점도 잘 나오고 너무 좋은 것 같습니다.</p>
+					<div class="col-9 text-left">
+						성적 <span style="color: red;">A</span>
+					</div>
+			</div>
+		</div>
 	</div>
+
+
+
 	<div class="modal fade" id="registerModal" tabindex="-1" role="dialog"
 		aria-labelledby="modal">
 		<div class="modal-dialog">
@@ -105,61 +129,95 @@
 									<option value="기타">기타</option>
 								</select>
 							</div>
+						</div>
+						<div class="form-group">
+							<label>제목</label> <input type="text" name="evaluationTitle"
+								class="form-control" maxlength="30">
+						</div>
+						<div class="form-group">
+							<label>내용</label>
+							<textarea name="evaluationContent" class="form-control"
+								maxlength="2048" style="height: 180px;"></textarea>
+						</div>
+						<div class="form-row">
+							<div class="form-group col-sm-3">
+								<label>종합</label> <select name="totalScore" class="form-control">
+									<option value="A" selected>A</option>
+									<option value="B">B</option>
+									<option value="C">C</option>
+									<option value="D">D</option>
+									<option value="F">F</option>
+								</select>
 							</div>
-							<div class="form-group">
-								<label>제목</label>
-								<input type="text" name="evaluationTitle" class="form-control" maxlength="30">
+							<div class="form-group col-sm-3">
+								<label>성적</label> <select name="creditScore"
+									class="form-control">
+									<option value="A" selected>A</option>
+									<option value="B">B</option>
+									<option value="C">C</option>
+									<option value="D">D</option>
+									<option value="F">F</option>
+								</select>
 							</div>
-							<div class="form-group">
-								<label>내용</label>
-								<textarea name="evaluationContent" class="form-control" maxlength="2048" style="height: 180px;"></textarea>
+							<div class="form-group col-sm-3">
+								<label>분위기</label> <select name="atmosphereScore"
+									class="form-control">
+									<option value="A" selected>A</option>
+									<option value="B">B</option>
+									<option value="C">C</option>
+									<option value="D">D</option>
+									<option value="F">F</option>
+								</select>
 							</div>
-							<div class="form-row">
-								<div class="form-group col-sm-3">
-									<label>종합</label>
-									<select name="totalScore" class="form-control">
-										<option value="A" selected>A</option>
-										<option value="B">B</option>
-										<option value="C">C</option>
-										<option value="D">D</option>
-										<option value="F">F</option>
-									</select>
-								</div>
-								<div class="form-group col-sm-3">
-									<label>성적</label>
-									<select name="creditScore" class="form-control">
-										<option value="A"selected>A</option>
-										<option value="B">B</option>
-										<option value="C">C</option>
-										<option value="D">D</option>
-										<option value="F">F</option>
-									</select>
-								</div>
-								<div class="form-group col-sm-3">
-									<label>분위기</label>
-									<select name="atmosphereScore" class="form-control">
-										<option value="A"selected>A</option>
-										<option value="B">B</option>
-										<option value="C">C</option>
-										<option value="D">D</option>
-										<option value="F">F</option>
-									</select>
-								</div>
-								<div class="form-group col-sm-3">
-									<label>강의</label>
-									<select name="lectureScore" class="form-control">
-										<option value="A"selected>A</option>
-										<option value="B">B</option>
-										<option value="C">C</option>
-										<option value="D">D</option>
-										<option value="F">F</option>
-									</select>
-								</div>
+							<div class="form-group col-sm-3">
+								<label>강의</label> <select name="lectureScore"
+									class="form-control">
+									<option value="A" selected>A</option>
+									<option value="B">B</option>
+									<option value="C">C</option>
+									<option value="D">D</option>
+									<option value="F">F</option>
+								</select>
 							</div>
-							<div class="modal-footer">
-								<button type="button" class="btn btn-secondary" data-dismiss="modal">취소</button>
-								<button type="submit" class="btn btn-primary">등록하기</button>
-							</div>					
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-secondary"
+								data-dismiss="modal">취소</button>
+							<button type="submit" class="btn btn-primary">등록하기</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="modal fade" id="reportModal" tabindex="-1" role="dialog"
+		aria-labelledby="modal">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="modal">신고하기</h5>
+					<button type="button" class="close" data-dismiss="modal"
+						aria-label="close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<form action="./reportAtion.jsp" method="post">
+
+						<div class="form-group">
+							<label>제목</label> <input type="text" name="reportTitle"
+								class="form-control" maxlength="30">
+						</div>
+						<div class="form-group">
+							<label>내용</label>
+							<textarea name="reportContent" class="form-control"
+								maxlength="2048" style="height: 180px;"></textarea>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-secondary"
+								data-dismiss="modal">취소</button>
+							<button type="submit" class="btn btn-danger">등록하기</button>
+						</div>
 					</form>
 				</div>
 			</div>
